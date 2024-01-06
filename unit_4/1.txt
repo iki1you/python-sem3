@@ -1,0 +1,35 @@
+<div class="####">
+    <p class="vacancy-title">Очень крутой разработчик</p>
+    <div class="####">
+        <span class="####">30000</span>
+        <span class="####">₽</span>
+    </div>
+    <div data-qa="####">
+        <span>от</span>
+        <span>3</span>
+        <span>до</span>
+        <span>6</span>
+        <span>лет</span>
+    </div>
+</div>
+<div class="####">
+    <p class="####">Очень крутая компания</p>
+    <p class="####">Крутости пер., д. 1337</p>
+</div>
+<div class="####">
+    <b>Бла-бла-бла</b>
+    <p>бла-бла</p>
+    <span>бла-бла-бла</span>
+    <strong>БЛА-БЛА</strong>
+    <i>бла</i>
+    <div>Бла-бла-бла</div>
+</div>
+<div class="####">
+    <p>Python</p>
+    <p>HTML</p>
+    <p>Django</p>
+    <p>Docker</p>
+</div>
+<div class="####">
+    <span>18 авг. 2023</span>
+</div>

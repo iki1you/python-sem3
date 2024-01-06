@@ -1,0 +1,162 @@
+import csv
+import math
+import re
+
+import prettytable
+
+
+class DataSet:
+    def __init__(self, file_name):
+        self.file_name = file_name
+        self.vacancies_objects = self.write_vacancies()
+
+    def write_vacancies(self):
+        vacancies = self.csv_parser(self.file_name)
+        if vacancies == 'Пустой файл':
+            return 'Пустой файл'
+        total = []
+        for i in vacancies:
+            vacancy = Vacancy()
+            #################
+            ####################
+			#################
+			################
+            total.append(vacancy)
+        return total
+
+    @staticmethod
+    def csv_parser(file_name):
+        #################
+		####################
+		###################
+		###############
+        return vacancies
+
+
+class Vacancy:
+    work_exp = {
+        "noExperience": "Нет опыта",
+        "between1And3": "От 1 года до 3 лет",
+        "between3And6": "От 3 до 6 лет",
+        "moreThan6": "Более 6 лет"
+    }
+
+    def __init__(self):
+        self.name = ''
+        ##################
+		##################
+		#################
+
+    def get_row(self):
+        return [################################]str(self.salary)
+
+
+class Salary:
+    currency_to_rub = {
+        "AZN": 35.68,
+        "BYR": 23.91,
+        "EUR": 59.90,
+        "GEL": 21.74,
+        "KGS": 0.76,
+        "KZT": 0.13,
+        "RUR": 1,
+        "UAH": 1.64,
+        "USD": 60.66,
+        "UZS": 0.0055,
+    }
+
+    def __init__(self, *args):
+        self.salary_from, self.salary_to, self.salary_gross, self.salary_currency = args
+
+    @staticmethod
+    def format_salary(k):
+        ###############
+        return ####################
+
+    def __str__(self):
+        ##############
+        ###############
+        ################
+        return {например:(39 850 - 39 850 (Рубли) (С вычетом налогов))}
+
+
+class InputConnect:
+
+    filter_fields = {
+        'Название': ############,
+        'Оклад': lambda vacancy, value: int(vacancy.salary.salary_from) <= int(value) <= int(vacancy.salary.salary_to),
+		####################
+    }
+
+    sort_keys = {
+        'Оклад': lambda x: (int(x.salary.salary_from) + int(x.salary.salary_to)) * Salary.currency_to_rub[
+            x.salary.salary_currency] / 2,
+		##########: ######,
+		############
+    }
+
+    def __init__(self, *args):
+        self.filename, self.filter_arg, self.sort, ############## = args
+        self.start = 0
+        self.end = 0
+
+    def input_correct(self):
+        ###############
+		##############
+		##############
+
+        return 0
+
+    def work_vacancies(self, data_vacancies):
+
+        vacancies = []
+        ###############
+		###############
+		###############
+		vacancies.sort(key=)
+        return vacancies
+
+    def get_table(self, set_vacancies):
+        correct = self.input_correct()
+        if correct != 0:
+            return correct
+
+        data_vacancies = set_vacancies.vacancies_objects
+        ##############
+		#############
+		#########
+
+        data_vacancies = self.work_vacancies(data_vacancies)
+
+        ##########
+		##########
+		##########
+        for i in data_vacancies:
+            mytable.add_row(i.get_row())
+
+
+        return mytable.get_string(start=self.start, end=self.end, fields=self.fields)
+
+    def sort_table(self, table):
+        ###################################
+        return table
+
+    def filter_row(self, vacancy, filter_argument):
+        ######################
+        #######################
+        #################
+        if #################:
+            return True
+        return False
+
+
+filename = input('Введите название файла: ')
+filter_arg = input('Введите параметр фильтрации: ')
+sort_arg = input('Введите параметр сортировки: ')
+reverse_arg = input('Обратный порядок сортировки (Да / Нет): ')
+limit = input('Введите диапазон вывода: ').split()
+fields = input('Введите требуемые столбцы: ')
+
+data_set = DataSet(filename)
+user_input = InputConnect(filename, filter_arg, sort_arg, reverse_arg, limit, fields)
+print(user_input.get_table(data_set))
